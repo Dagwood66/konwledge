@@ -6,6 +6,8 @@
     git checkout fileName 把文件恢复到上一次提交
     git remote add remoteName remoteUrl 添加远程仓库
     git push -u remoteName branchName 推送本地分支到远程仓库
+    git ls-files 查看索引库文件列表
+    git rm --cached pathName 删除跟踪状态(从索引库删除)保留本地文件
 # 2. git 分支
 ## 2.1 分支
     git branch branchName 创建分支
@@ -21,4 +23,6 @@
     git branch -D beanchName 强制删除当前分支
 ## 2.3 参考
 > [分支的新建与合并](https://git-scm.com/book/zh/v1/Git-%E5%88%86%E6%94%AF-%E5%88%86%E6%94%AF%E7%9A%84%E6%96%B0%E5%BB%BA%E4%B8%8E%E5%90%88%E5%B9%B6)  
-> [分支的管理](https://git-scm.com/book/zh/v1/Git-%E5%88%86%E6%94%AF-%E5%88%86%E6%94%AF%E7%9A%84%E7%AE%A1%E7%90%86)
+> [分支的管理](https://git-scm.com/book/zh/v1/Git-%E5%88%86%E6%94%AF-%E5%88%86%E6%94%AF%E7%9A%84%E7%AE%A1%E7%90%86)  
+> [git-ls-files](https://git-scm.com/docs/git-ls-files)  
+> [git忽略已经被提交的文件](https://segmentfault.com/q/1010000000430426)
