@@ -1,8 +1,50 @@
 # Dom
-## set dom attribute
+## Dom attribute
     $("#domIdName").attr("attrName","value");
-    $("selector").find("selector"); 二次查找
+    $("selector").children(); 返回直接子元素
+    $("selector").children("selector"); 从直接子元素查找元素
+    $("selector").find("selector"); 从后代元素中查找元素
     jQueryDom.prevObject 获取上一次获取的jQuery
-# event
-
-# ajax
+## 设置Dom的style属性
+    $("p").css("color"); 
+        获取p的style的color的值 返回rgb()字符串
+        返回第一个匹配元素的 CSS 属性值
+        当用于返回一个值时，不支持简写的 CSS 属性
+        
+    $("p").css("color","#fff");
+        设置 CSS 属性
+        
+     $("p").css({"background-color":"yellow","font-size":"200%"});  
+        设置多个 CSS 属性
+     
+     $(selector).css(name,function(index,value))
+        使用函数来设置 CSS 属性
+        name 属性值
+        index 为元素在对象集合中的索引位置
+        value 是原先的属性值
+## 设置Dom的class属性
+    addClass() - 向被选元素添加一个或多个类
+    removeClass() - 从被选元素删除一个或多个类
+    toggleClass() - 对被选元素进行添加/删除类的切换操作
+## 添加Dom
+    append() - 在被选元素的结尾插入内容
+    prepend() - 在被选元素的开头插入内容
+    after() - 在被选元素之后插入内容
+    before() - 在被选元素之前插入内容
+## Dom尺寸-Dimensions
+    width() 获取或设置元素的宽度(不包含内边距，边框，外边距)
+    height() 获取或设置元素的高度(不包含内边距，边框，外边距)
+    innerWidth() 获取元素的宽度(不包含边框，外边距)
+    innerHeight() 获取元素的高度(不包含边框，外边距)
+    outerWidth() 获取元素的宽度(不包含外边距)
+    innerHeight() 获取元素的高度(不包含外边距)
+    outerWidth(true) 获取元素的宽度(包含内边距，边框，外边距)
+    innerHeight(true) 获取元素的高度(包含内边距，边框，外边距)
+## jQuery对象与Dom对象转换
+    jQuery对象无法使用DOM对象的任何方法
+    DOM对象也不能使用jQuery里的方法.
+    jQuery对象转换Dom对象
+        1.$dom[index] 通过索引index获取Dom对象
+        2.$dom.get(index) 通过jQuery提供的get方法
+    Dom对象转换jQuery对象
+        1.$(dom) jQuery包装dom对象
