@@ -1,8 +1,20 @@
-# Array
-## sort
-    arr.sort(function(item1,item2){
-        return item1 > item2;
-    });
+# 1. Array
+## 1.1 sort
+    arr.sort(); 字符串的诸个字符的Unicode位点进行排序(只可排序字符串)
+    arr.sort(compareFunction(item1,item2)); 使用自定义规则排序
+        compareFunction 返回值大于0 item1 位于 item2 后面
+        compareFunction 返回值等于0 item1 位于 item2 不变
+        compareFunction 返回值小于0 item1 位于 item2 前面
+## 1.2 every
+    arr.every(function(callback){});
+    测试数组的所有元素是否都通过了指定函数的测试。
+    返回true/false
+    callback 全部返回true的情况下every函数返回true
+## 1.3 filter
+    arr.filter(function(item,idnex,array){})
+    过滤-返回符合条件的新数组
+    创建一个新数组, 其包含通过所提供函数实现的测试的所有元素。 
+    函数返回ture,当前item会被添加到新数组中
 # String
     length 返回了字符串的长度。
     match() 使用正则表达式与字符串相比较。
@@ -165,3 +177,21 @@
 ## 参考    
 > [String - JavaScript | MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String)    
 # 正则表达式
+# 事件
+## oninput
+    1.输入字符时触发
+    2.粘贴字符串时触发
+## JSON js对象互相转换
+    1.JSON对象转JS对象
+        1.JSON.parse(jsonStr); 只可解析标准JSON字符串
+        2.eval("("+jsonStr+")"); 可解析标准JSON字符串或不标准JSON字符串(不安全)
+        3.new Function("", "return" + str1)(); 可解析标准JSON字符串或不标准JSON字符串
+    2.JS对象转JSON字符串
+        1.JSON.stringify(jsObj);
+### 参考        
+>    [JSON参考](http://www.cnblogs.com/myjavawork/articles/1979279.html)        
+# window
+## eval()传入的字符串当做 JavaScript 代码进行执行             
+    如果字符串表示的是表达式，eval() 会对表达式进行求值。
+    如果参数表示一个或多个 JavaScript 语句， 那么 eval() 就会执行这些语句。
+    eval 中函数作为字符串被定义需要“（”和“）”作为前缀和后缀

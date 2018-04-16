@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    var str1 = "{key:\"value\"}";
+    var str2 = "{\"key\":\"value\"}";
+
+    var str3 = "[{key:\"value\"}]";
+    var str4 = "[{\"key\":\"value\"}]";
+
+//    console.log("", eval("(" + str1 + ")"));
+//    console.log("", eval(str2));
+//    console.log("", eval(str3));
+//    console.log("", eval(str4));
+
+    console.log("", new Function("", "return" + str1)());
+    console.log("", new Function("", "return" + str2)());
+    console.log("", new Function("", "return" + str3)());
+    console.log("", new Function("", "return" + str4)());
+
+</script>
+</body>
+</html>
