@@ -10,6 +10,8 @@
 ## localStorage 与 sessionStorage 区别
     localStorage 页面关闭数据依然保存
     sessionStorage 页面关闭数据销毁(不包括页面重新加载和恢复)
+## 参考
+> [参考1](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API)    
 # 1. Array
 ## 1.1 sort
     arr.sort(); 字符串的诸个字符的Unicode位点进行排序(只可排序字符串)
