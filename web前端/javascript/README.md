@@ -1,3 +1,15 @@
+# localStorage 与 sessionStorage
+## Properties
+    lenght 返回keyName数量
+## method
+    key(number) 返回第number个的keyName
+    getItem(keyName) 获取keyName的value(字符串)
+    setItem(keyName,value) 设置keyName的value
+    removeItem(keyName) 删除keyName
+    clear() 清空keyName
+## localStorage 与 sessionStorage 区别
+    localStorage 页面关闭数据依然保存
+    sessionStorage 页面关闭数据销毁(不包括页面重新加载和恢复)
 # 1. Array
 ## 1.1 sort
     arr.sort(); 字符串的诸个字符的Unicode位点进行排序(只可排序字符串)
