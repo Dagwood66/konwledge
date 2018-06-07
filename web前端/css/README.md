@@ -75,12 +75,22 @@
 > [word-break 和 word-wrap 的区别 - 腾讯Web前端 IMWeb 团队社区 | blog | 团队博客](http://imweb.io/topic/59fe82991f0e50753869bf8c)  
 # 常见布局
 ## 顶部定高底部铺满
-    ----------------------------------------
-    -                                      -
-    ----------------------------------------
-    -                                      -
-    -                                      -
-    -                                      -
-    -                                      -
-    ----------------------------------------
+   
+# box-shadow 阴影
+    参数
+        inset | offset-x | offset-y | blur-radius | spread-radius | color
+        inset 阴影起始位置
+            default 外阴影(边框以外)(默认为省略)
+            inset 内阴影(边框以内,背景之上内容之下)
+        offset-x    阴影偏移量
+        offset-y    阴影偏移量
+        blur-radius  模糊面积
+        spread-radius 阴影面积
+        color 颜色
+    box-shadow可以设置多个 以逗号分隔 第一个层级最高 最后一个层级最低
+    案例1:
+        box-sizing: border-box;
+        height: 100%;
+        padding: 5px;
+        box-shadow: inset 0 0 0 3px #3873c9, inset 0 0 0 4px #438ad4, inset 0 0 0 5px #2056a9;
    
