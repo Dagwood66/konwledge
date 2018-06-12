@@ -1,11 +1,12 @@
-# 修改http端口号
+# 1. 修改http端口号
     1.找到tomcat安装目录
     2.找到安装目录上的 conf/server.xml
     3.找到server.xml中的节点属性含有protocol等于HTTP/1.1的connector节点
         <Connector protocol="HTTP/1.1"/>
     4.修改port属性为需要的端口号
-        <Connector port="80"/>
-# 绑定域名   
+        <Connector port="80"/>       
+        
+# 2. 绑定域名   
     方案1 不修改默认Host
         1.找到tomcat安装目录
         2.找到安装目录上的 conf/server.xml
@@ -19,7 +20,8 @@
         7.注意事项
             本地路径 E:\fileName   
             发布路径 E:/fileName
-# url不输入项目名直接访问
+            
+# 3. url不输入项目名直接访问
     1.找到tomcat安装目录
     2.找到安装目录上的 conf/server.xml   
     3.找到存放当前项目的Host节点
@@ -29,7 +31,8 @@
         <Context path=""/>
     6.添加docBase属性    
         <Context path="" docBase="项目名"/>
-# 参考
-> [server文件配置](https://www.cnblogs.com/f-ck-need-u/p/7727256.html#blog4.4)
-> [Host配置API](https://tomcat.apache.org/tomcat-9.0-doc/config/host.html#Host_Name_Aliases)
-> [Engine配置API](https://tomcat.apache.org/tomcat-9.0-doc/config/engine.html)
+        
+# 4. 参考
+> [server文件配置](https://www.cnblogs.com/f-ck-need-u/p/7727256.html#blog4.4)  
+> [Host配置API](https://tomcat.apache.org/tomcat-9.0-doc/config/host.html#Host_Name_Aliases)  
+> [Engine配置API](https://tomcat.apache.org/tomcat-9.0-doc/config/engine.html)  
