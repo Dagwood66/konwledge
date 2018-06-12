@@ -15,10 +15,10 @@
     git checkout -b branchName 创建并切换当为前分支
     git merge otherBranchName 当前分支与otherBranch合并
 ## 2.2 分支管理
-    git branch 查看当前所有分支
+    git branch 查看本地所有分支
+    git branch -a 查看本地/远程所有分支
     git branch --merged 查看已经（或尚未）与当前分支合并的分支
     git branch --no-merged 查看尚未合并的工作
-    git branch 查看当前所有分支
     git branch -d beanchName 删除当前分支
     git branch -D beanchName 强制删除当前分支
 ## 2.3 参考
