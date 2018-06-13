@@ -233,3 +233,24 @@
     event.stopPropagation() 阻止事件冒泡
 ## 参考
 > [Event - Web API 接口 | MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/Event)  
+---  
+# 1. Math
+## 1.1 random()
+    返回一个浮点数
+    伪随机数
+    范围 [0,1)
+## 1.2 round()      
+    返回一个数字四舍五入后最接近的整数。  
+        Math.round()并不总是舍入到远离0的方向（尤其是在负数的小数部分恰好等于0.5的情况下）。
+    Math.round(20.49) 20  
+    Math.round(20.5) 21  
+    Math.round(-20.5) -20  
+    Math.round(-20.51) -21  
+## 1.3 ceil() 
+    函数返回大于或等于一个给定数字的最小整数
+    向上取整
+## 1.4 floor()    
+    返回小于或等于一个给定数字的最大整数。
+    向下取整
+## 1.5 abs()     
+    返回绝对值
