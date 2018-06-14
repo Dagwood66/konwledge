@@ -98,3 +98,11 @@
    font-size:0;
 ## 参考
 > [CSS3如何去除 inline block 元素之间多出的空格 - 念念卜妄 - 博客园](https://www.cnblogs.com/nnbw/p/5673783.html)     
+
+# 横向滚动
+    父元素
+        white-space:nowrap; 禁止行内元素换行
+        overflow-x:scroll;
+    子元素
+        display:inline-block; 或
+        display:inline;

@@ -21,3 +21,11 @@
 > [移动前端开发之viewport的深入理解](https://www.cnblogs.com/2050/p/3877280.html)  
 > [在移动浏览器中使用viewport元标签控制布局](https://developer.mozilla.org/zh-CN/docs/Mobile/Viewport_meta_tag)  
 > [移动端Web页面适配方案](https://segmentfault.com/a/1190000008767416)  
+
+# DOM
+## a
+    target属性
+        _blank
+        浏览器总在一个新打开、未命名的窗口中载入目标文档。
+        _top	
+        在整个窗口中打开被链接文档

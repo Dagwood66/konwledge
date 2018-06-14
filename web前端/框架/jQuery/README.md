@@ -5,6 +5,8 @@
     $("selector").children("selector"); 从直接子元素查找元素
     $("selector").find("selector"); 从后代元素中查找元素
     jQueryDom.prevObject 获取上一次获取的jQuery
+## 设置Dom的属性
+    $("p").attr("key",value);
 ## 设置Dom的style属性
     $("p").css("color"); 
         获取p的style的color的值 返回rgb()字符串
