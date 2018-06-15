@@ -26,3 +26,27 @@
 > [分支的管理](https://git-scm.com/book/zh/v1/Git-%E5%88%86%E6%94%AF-%E5%88%86%E6%94%AF%E7%9A%84%E7%AE%A1%E7%90%86)  
 > [git-ls-files](https://git-scm.com/docs/git-ls-files)  
 > [git忽略已经被提交的文件](https://segmentfault.com/q/1010000000430426)
+
+# 1. git config
+## 1.1 配置文件作用范围
+    --system 针对系统
+    --global 针对当前用户
+    --local  针对当前git(默认)
+### 1.1.1 优先级
+    local > global > system
+## 1.2 常见命令
+### 1.2.1 查看config配置
+    --list 全写,仅查看当前规定范围
+    -l 简写
+### 1.2.2 添加config配置
+    --add key value
+    key 
+        格式必须为 section.name
+        例: test.a
+    value 
+        不可为空
+### 1.2.3 修改config配置
+### 1.2.4 删除config配置
+      
+              
+             

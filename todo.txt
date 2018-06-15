@@ -1,6 +1,8 @@
 TODO 事件触发
 TODO angular 隔离作用域
-TODO git移除远程分支
 TODO https://www.npmjs.com/package/bower-npm-resolver
 TODO flex
 TODO css常见布局
+
+//当前正在进行
+TODO git移除远程分支
