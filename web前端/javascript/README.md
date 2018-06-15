@@ -254,3 +254,12 @@
     向下取整
 ## 1.5 abs()     
     返回绝对值
+---
+# 1. table Dom    
+## 1.1 插入行
+    insertRow
+## 1.2 插入列
+    insertCell
+## 1.3 删除行
+    deleteRow
+    

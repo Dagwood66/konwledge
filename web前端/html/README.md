@@ -29,3 +29,42 @@
         浏览器总在一个新打开、未命名的窗口中载入目标文档。
         _top	
         在整个窗口中打开被链接文档
+---        
+# 1. table                
+## 1.1 格式
+    <table>
+        <caption>表格标题</caption>
+        <thead>
+            <tr>
+                <th>表头1</th>
+                <th>表头2</th>
+                <th>表头3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>value1</td>
+                <td>value1</td>
+                <td>value1</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tfoot>
+    </table>
+### 1.1.1 描述
+    table
+    thead 无margin,padding属性
+    tbody 无margin,padding属性
+    tfoot 无margin,padding属性
+    tr 无margin,padding属性
+    th 无margin,padding属性
+    td 无margin属性
+## 1.2 属性   
+    cellspacing 规定单元格之间的空间
+    colspan 横跨n列表格
+    rowspan 竖跨n行表格
