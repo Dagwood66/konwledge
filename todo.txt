@@ -3,6 +3,10 @@ TODO angular 隔离作用域
 TODO https://www.npmjs.com/package/bower-npm-resolver
 TODO flex
 TODO css常见布局
+TODO jquery ajax
+TODO jquery ajax post json
+    [](https://stackoverflow.com/questions/6323338/jquery-ajax-posting-json-to-webservice)
+TODO jquery ajax 设置拦截器
 
 //当前正在进行
 TODO git移除远程分支

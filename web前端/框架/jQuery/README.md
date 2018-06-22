@@ -50,3 +50,8 @@
         2.$dom.get(index) 通过jQuery提供的get方法
     Dom对象转换jQuery对象
         1.$(dom) jQuery包装dom对象
+        
+---        
+     
+# ajax
+          
