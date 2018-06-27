@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>字符串统计</title>
+    <style>
+        table, td, th {
+            border: 1px solid #eee;
+            text-align: center;
+        }
+
+        td, th {
+            padding: 4px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <textarea id="str" title="" rows="10"></textarea>
+</div>
+<div>
+    <label>
+        <input type="checkbox" id="isIgnore" checked>
+        <span>忽略常见单词</span>
+    </label>
+    <label>
+        <input type="checkbox" id="isLetter">
+        <span>区分大小写</span>
+    </label>
+    <button onclick="count()">统计</button>
+</div>
+<div>
+    <table>
+        <thead>
+        <tr>
+            <th>单词</th>
+            <th>出现次数</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+<script>
+    var isIgnoreDom = document.querySelector("#isIgnore");
+    var isLetterDom = document.querySelector("#isLetter");
+
+    function count() {
+        var str = document.querySelector("#str").value.trim();
+
+        var arr = getCount(replacePunctuation(str), isLetterDom.checked, isIgnoreDom.checked);
+        console.log("不重复单词数", arr.length);
+        console.log("不重复单词", arr);
+        arr = arr.filter(function (item) {
+            return item.count > 0;
+        });
+
+        var tbody = document.querySelector("tbody");
+        tbody.innerHTML = "";
+        var documentFragment = document.createDocumentFragment();
+        arr.forEach(function (item) {
+            var tr = document.createElement("tr");
+            var name = document.createElement("td");
+            var count = document.createElement("td");
+            name.innerHTML = item.name;
+            count.innerHTML = item.count;
+            tr.appendChild(name);
+            tr.appendChild(count);
+            documentFragment.appendChild(tr);
+        });
+        tbody.appendChild(documentFragment);
+        console.log("不重复单词数 > 1", arr);
+        console.log("不重复单词 > 1", arr);
+        arr.length = 100;
+        console.log("前一百单词", arr)
+    }
+
+    function replacePunctuation(str) {
+        return str
+            .replace(/,/gm, " ")//移除标点符号
+            .replace(/:/gm, " ")
+            .replace(/;/gm, " ")
+            .replace(/"/gm, " ")
+            .replace(/\?/gm, " ")
+            .replace(/\./gm, " ")
+            .replace(/\s+/gm, " ");//移除多空格
+    }
+
+    function isIgnoreFun(str) {
+        var arr = [
+            "I",
+            "He",
+            "She",
+            "It",
+
+            "A",
+            "An",
+
+            "Not",
+            "And",
+            "Or",
+
+            "The",
+            "To",
+        ];
+        for (var i = arr.length - 1; i >= 0; i--) {
+            arr.push(arr[i].toLowerCase());
+        }
+        return arr.filter(function (item) {
+                return item == str;
+            }).length > 0;
+    }
+
+    function getCount(str, isLetter, isIgnore) {
+        isLetter = isLetter == null ? false : isLetter;
+        isIgnore = isIgnore == null ? true : isIgnore;
+        var strArr = str.split(" ");
+        console.log("总单词数 : ", strArr.length);
+        var map = new Map();
+        var arr = [];
+        strArr.forEach(function (item) {
+            if (!isLetter) {
+                item = item.toLowerCase();
+            }
+            //isIgnore true
+            //isIgnoreFun false  install
+
+            //isIgnore true
+            //isIgnoreFun true
+
+            //isIgnore false
+            //isIgnoreFun true  install
+
+            //isIgnore false
+            //isIgnoreFun false  install
+            if (!(isIgnore && isIgnoreFun(item))) {
+                var value = map.get(item);
+                if (value != null) {
+                    map.set(item, value + 1);
+                } else {
+                    map.set(item, 0);
+                }
+            }
+        });
+        map.forEach(function (value, key) {
+            arr.push({
+                name: key,
+                count: value,
+            });
+        });
+        arr = arr.sort(function (item1, item2) {
+            if (item1.count < item2.count) {
+                return 1;
+            } else {
+                return -1;
+            }
+        });
+        return arr;
+    }
+</script>
+</html>
