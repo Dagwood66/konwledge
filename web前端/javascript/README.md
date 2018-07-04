@@ -12,23 +12,9 @@
     sessionStorage 页面关闭数据销毁(不包括页面重新加载和恢复)
 ## 参考
 > [参考1](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API)    
-# 1. Array
-## 1.1 sort
-    arr.sort(); 字符串的诸个字符的Unicode位点进行排序(只可排序字符串)
-    arr.sort(compareFunction(item1,item2)); 使用自定义规则排序
-        compareFunction 返回值大于0 item1 位于 item2 后面
-        compareFunction 返回值等于0 item1 位于 item2 不变
-        compareFunction 返回值小于0 item1 位于 item2 前面
-## 1.2 every
-    arr.every(function(callback){});
-    测试数组的所有元素是否都通过了指定函数的测试。
-    返回true/false
-    callback 全部返回true的情况下every函数返回true
-## 1.3 filter
-    arr.filter(function(item,idnex,array){})
-    过滤-返回符合条件的新数组
-    创建一个新数组, 其包含通过所提供函数实现的测试的所有元素。 
-    函数返回ture,当前item会被添加到新数组中
+  
+---
+  
 # String
     length 返回了字符串的长度。
     match() 使用正则表达式与字符串相比较。
@@ -189,8 +175,54 @@
     quote() 将字符串中包含的特殊字符进行转义(反斜杠),然后在字符串两边各加上一个双引号(")并返回,并不修改原字符串.
     toSource() 返回一个代表对象的源代码。
 ## 参考    
-> [String - JavaScript | MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String)    
-# 正则表达式
+> [String - JavaScript | MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String)  
+      
+---    
+        
+# 1. 正则表达式
+## 1.1 语法
+    /pattern/flags
+    new RegExp(pattern [, flags])
+    RegExp(pattern [, flags])
+    参数:
+        pattern 正则表达式文本
+        flags   标志(可组合)
+            g 全局匹配,而不是在第一个匹配后停止
+            i 忽略大小写
+            m 多行匹配
+## 1.2 正则表达式中特殊字符的含义
+    字符类别
+        .   匹配任意单个字符,行结束符除外(\n \r \u2028 \u2029)
+        \d  匹配任意阿拉伯数字
+        \t	匹配一个水平制表符（tab）
+        \r	匹配一个回车符（carriage return）
+        \n	匹配一个换行符（linefeed）
+    字符集合
+        [xyz] 匹配字符集中的任意一个字符,可以使用连字符 - 指定范围
+            [abc] = [a-c]
+        [^xyz] 匹配不在字符集中的任意一个字符    
+    边界
+        ^   匹配每行开头
+        $   匹配每行结尾
+    分组
+    数量词
+        *   匹配前面模式0或多次
+        +   匹配前面模式1或多次
+        {n} 模式连续出现n次匹配
+        {n,}模式至少连续出现n次匹配
+        {n,m}模式至少连续出现n次，最多连续出现n次匹配
+    断言
+## 1.3 使用
+    reg.test(str)
+        reg为全局的情况下会记录索引值,所以会导致每次结果不一致
+            解决方案1:
+                reg.lastIndex=0;
+            解决方案2:
+                关闭全局匹配        
+## 参考
+> [RegExp - JavaScript | MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp)                 
+---    
+                      
 # 事件
 ## oninput
     1.输入字符时触发
@@ -262,4 +294,26 @@
     insertCell
 ## 1.3 删除行
     deleteRow
+      
+---
+      
+# 1. Array
+## 1.1 sort
+    arr.sort(); 字符串的诸个字符的Unicode位点进行排序(只可排序字符串)
+    arr.sort(compareFunction(item1,item2)); 使用自定义规则排序
+        compareFunction 返回值大于0 item1 位于 item2 后面
+        compareFunction 返回值等于0 item1 位于 item2 不变
+        compareFunction 返回值小于0 item1 位于 item2 前面    
+## 1.2 every
+    arr.every(function(callback){});
+    测试数组的所有元素是否都通过了指定函数的测试。
+    返回true/false
+    callback 全部返回true的情况下every函数返回true
+## 1.3 filter
+    arr.filter(function(item,idnex,array){})
+    过滤-返回符合条件的新数组
+    创建一个新数组, 其包含通过所提供函数实现的测试的所有元素。 
+    函数返回ture,当前item会被添加到新数组中
+# 2. Set    
+# 3. Map    
     

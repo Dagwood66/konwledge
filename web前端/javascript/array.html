@@ -18,6 +18,17 @@
 
     });
     console.log("", arr);
+
+    (function () {
+        var set = new Set();
+
+        var obj = {a: 0};
+        set.add(obj);
+        set.add(obj);
+//        set.add({a: 0});
+        set.add("a");
+        console.log("", set);
+    })();
 </script>
 </body>
 </html>
