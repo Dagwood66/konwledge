@@ -51,7 +51,37 @@
     Dom对象转换jQuery对象
         1.$(dom) jQuery包装dom对象
         
+# 1. Dom
+## 1.1 Dom操作        
+### 1.1.1 Dom删除
+    empty() 删除当前元素的子元素
+    remove() 删除当前元素
+    remove(select) 删除当前元素中符合select的元素            
+        
 ---        
      
-# ajax
+# 1. ajax
+## 1.1 常见配置
+    url 请求地址
+    cache 缓存设置
+        true,false
+    type 请求方式
+        默认 get
+        get,post,patch,delete
+    headers  请求头
+        常见请求头
+            "Content-Type": "application/json;charset=UTF-8"
+    data 请求体
+        当type为get时data自动转换为jquey参数
+        当type为post时,如添加urlJqurey,需要在url上追加。如data为json,需转换为json字符串发送
+## 1.2 使用方式
+    方式1:
+        $.ajax({
+            url: "https://www.baidu.com/",
+            type: "get",
+        }).then(function(res){
+            //请求成功
+        });
+## 参考
+> []()
           

@@ -3,9 +3,7 @@ TODO angular 隔离作用域
 TODO https://www.npmjs.com/package/bower-npm-resolver
 TODO flex
 TODO css常见布局
-TODO jquery ajax
-TODO jquery ajax post json
-    [](https://stackoverflow.com/questions/6323338/jquery-ajax-posting-json-to-webservice)
+TODO css垂直居中
 TODO jquery ajax 设置拦截器
 TODO 正则表达式
 
