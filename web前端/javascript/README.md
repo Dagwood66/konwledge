@@ -189,7 +189,7 @@
         flags   标志(可组合)
             g 全局匹配,而不是在第一个匹配后停止
             i 忽略大小写
-            m 多行匹配
+            m 多行匹配            
 ## 1.2 正则表达式中特殊字符的含义
     字符类别
         .   匹配任意单个字符,行结束符除外(\n \r \u2028 \u2029)
@@ -213,12 +213,15 @@
         {n,m}模式至少连续出现n次，最多连续出现n次匹配
     断言
 ## 1.3 使用
-    reg.test(str)
-        reg为全局的情况下会记录索引值,所以会导致每次结果不一致
-            解决方案1:
-                reg.lastIndex=0;
-            解决方案2:
-                关闭全局匹配        
+### 1.3.1 test(str)
+    用来查看正则表达式与指定的字符串是否匹配  
+    reg为全局的情况下会记录索引值,所以会导致每次结果不一致
+        解决方案1:
+            reg.lastIndex=0;
+        解决方案2:
+            关闭全局匹配        
+### 1.3.2 exec(str)
+    指定字符串中执行一个搜索匹配。返回一个结果数组或 null
 ## 参考
 > [RegExp - JavaScript | MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp)                 
 ---    
