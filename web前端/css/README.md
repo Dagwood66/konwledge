@@ -106,3 +106,14 @@
     子元素
         display:inline-block; 或
         display:inline;
+        
+---  
+     
+# Chrome浏览器不支持12px以下字体的解决方案
+    低版本
+        -webkit-text-size-adjust:none            
+    高版本
+        display:inline-block;
+        font-size:12px;
+        transform:scale(size)    
+            size = 要设置的大小 / 12
