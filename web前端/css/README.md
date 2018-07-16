@@ -120,7 +120,14 @@
         display:inline-block;
         font-size:12px;
         transform:scale(size)    
-            size = 要设置的大小 / 12
+            size = 要设置的大小 / 12  
+# 隐藏Dom
+    1. display:none;
+        隐藏元素且不占位置
+    2. visibility:hidden;
+        隐藏元素且占位置
+    3. 设置宽高等于0且不允许元素溢出
+    4. 利用定位使元素位于显示范围以外            
             
 ---  
             

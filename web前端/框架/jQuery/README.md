@@ -28,6 +28,18 @@
 
 ---        
      
+# event     
+## 添加事件
+    $dom.click(func) 添加单击事件
+        func 事件处理函数
+## 触发事件
+    $dom.click() 触发事件
+    $dom.trigger(eventName | event) 触发事件
+        eventName 事件名
+        event 事件
+## 删除事件          
+---        
+     
 # jQuery对象与Dom对象转换
     jQuery对象无法使用DOM对象的任何方法
     DOM对象也不能使用jQuery里的方法.

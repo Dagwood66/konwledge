@@ -1,4 +1,3 @@
-TODO 事件触发
 TODO angular 隔离作用域
 TODO https://www.npmjs.com/package/bower-npm-resolver
 TODO flex
