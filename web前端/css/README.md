@@ -69,12 +69,16 @@
 ## 禁止自动换行
     white-space: nowrap;
     word-break: keep-all;
+## 移除下划线
+    text-decoration:none; 
+## 透明
+    opacity : 0.8;
 ### 参考
 > [white-space - CSS：层叠样式表 | MDN](https://developer.mozilla.org/zh-CN/docs/Web/CSS/white-space)  
 > [word-break - CSS：层叠样式表 | MDN](https://developer.mozilla.org/zh-CN/docs/Web/CSS/word-break)  
 > [word-break 和 word-wrap 的区别 - 腾讯Web前端 IMWeb 团队社区 | blog | 团队博客](http://imweb.io/topic/59fe82991f0e50753869bf8c)  
-# 常见布局
-## 顶部定高底部铺满
+
+---  
    
 # box-shadow 阴影
     参数
@@ -117,3 +121,20 @@
         font-size:12px;
         transform:scale(size)    
             size = 要设置的大小 / 12
+            
+---  
+            
+# 常见布局
+## 顶部定高底部铺满       
+     
+# 1. 布局
+## 1.1 浮动(float)  
+## 1.2 定位(position)  
+    position static fixed relative absolute
+### 1.2.n 参考
+> [position - CSS：层叠样式表 | MDN](https://developer.mozilla.org/zh-CN/docs/Web/CSS/position)  
+## 1.3 弹性盒子(flex)  
+## 1.4 网格(grids)  
+      
+            
+            

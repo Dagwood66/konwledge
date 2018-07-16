@@ -1,3 +1,44 @@
+# dom                      
+## 1. element        
+    append(content[,content]) 添加元素
+        content包含
+            HtmlString  字符串形式的html
+            Element     dom对象
+            Text        html标签
+            Array       数组
+            $dom        jQuery对象
+    empty() 清空当前元素
+    remove() 删除当前元素
+    remove(select) 删除当前元素后代中符合select的元素            
+## 2. attribute  
+    $dom.attr(key) 获取当前属性值
+    $dom.attr(key,value) 添加/修改当前属性值
+    $dom.removeAttr(key) 删除当前属性
+## 3. style    
+    $dom.css(key) 获取style属性值
+    $dom.css(key,value) 添加/修改style属性值
+## 4. class  
+    $dom.addClass(className) 添加一个或多个Css
+    $dom.hasClass(className) 当前元素拥有Css返回true
+    $dom.toggleClass(className) 切换Css,如果存在则删除,否则反之
+    $dom.removeClass(className) 移除一个或多个Css
+## 参考  
+>   [jquery-css_style](https://api.jquery.com/css/)  
+>   [jquery-css](https://api.jquery.com/category/css/)  
+
+---        
+     
+# jQuery对象与Dom对象转换
+    jQuery对象无法使用DOM对象的任何方法
+    DOM对象也不能使用jQuery里的方法.
+    jQuery对象转换Dom对象
+        1.$dom[index] 通过索引index获取Dom对象
+        2.$dom.get(index) 通过jQuery提供的get方法
+    Dom对象转换jQuery对象
+        1.$(dom) jQuery包装dom对象
+          
+---       
+     
 # Dom
 ## Dom attribute
     $("#domIdName").attr("attrName","value");
@@ -24,10 +65,6 @@
         name 属性值
         index 为元素在对象集合中的索引位置
         value 是原先的属性值
-## 设置Dom的class属性
-    addClass() - 向被选元素添加一个或多个类
-    removeClass() - 从被选元素删除一个或多个类
-    toggleClass() - 对被选元素进行添加/删除类的切换操作
 ## 添加Dom
     append() - 在被选元素的结尾插入内容
     prepend() - 在被选元素的开头插入内容
@@ -42,24 +79,9 @@
     innerHeight() 获取元素的高度(不包含外边距)
     outerWidth(true) 获取元素的宽度(包含内边距，边框，外边距)
     innerHeight(true) 获取元素的高度(包含内边距，边框，外边距)
-## jQuery对象与Dom对象转换
-    jQuery对象无法使用DOM对象的任何方法
-    DOM对象也不能使用jQuery里的方法.
-    jQuery对象转换Dom对象
-        1.$dom[index] 通过索引index获取Dom对象
-        2.$dom.get(index) 通过jQuery提供的get方法
-    Dom对象转换jQuery对象
-        1.$(dom) jQuery包装dom对象
-        
-# 1. Dom
-## 1.1 Dom操作        
-### 1.1.1 Dom删除
-    empty() 删除当前元素的子元素
-    remove() 删除当前元素
-    remove(select) 删除当前元素中符合select的元素            
-        
----        
-     
+          
+---    
+            
 # 1. ajax
 ## 1.1 常见配置
     url 请求地址

@@ -6,6 +6,7 @@ TODO css常见布局
 TODO css垂直居中
 TODO jquery ajax 设置拦截器
 TODO 正则表达式深入
-
-//当前正在进行
+TODO 浏览器关闭刷新监听
+TODO js apply call bind
+TODO this
 TODO git移除远程分支
