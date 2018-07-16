@@ -24,8 +24,16 @@
     $dom.removeClass(className) 移除一个或多个Css
 ## 参考  
 >   [jquery-css_style](https://api.jquery.com/css/)  
->   [jquery-css](https://api.jquery.com/category/css/)  
+>   [jquery-css](https://api.jquery.com/category/css/)    
 
+---  
+   
+# 选择器(Selectors)  
+    $(".className") 根据className选择元素
+    $("#idName") 根据idName选择元素
+    $dom.eq(index) 选择第index个元素   
+    $dom.children([selector]) 返回符合selector的直接子元素
+    $dom.find([selector]) 返回符合selector的子元素
 ---        
      
 # event     
@@ -54,9 +62,6 @@
 # Dom
 ## Dom attribute
     $("#domIdName").attr("attrName","value");
-    $("selector").children(); 返回直接子元素
-    $("selector").children("selector"); 从直接子元素查找元素
-    $("selector").find("selector"); 从后代元素中查找元素
     jQueryDom.prevObject 获取上一次获取的jQuery
 ## 设置Dom的属性
     $("p").attr("key",value);
