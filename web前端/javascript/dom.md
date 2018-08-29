@@ -1,5 +1,12 @@
 # dom 基本操作
-    setAttributes("key",value); 设置属性
+    获取属性值  
+        dom.getAttribute("key"); 
+    设置属性  
+        dom.setAttribute("key",value); 
+    删除属性
+        dom.removeAttribute("key");    
+    获取全部属性名
+        dom.getAttributeNames();
 # input file
     dom属性
         accept="image/png" 仅允许以png为后缀的文件
