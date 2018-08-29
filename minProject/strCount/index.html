@@ -57,9 +57,9 @@
         var arr = getCount(replacePunctuation(str), isLetterDom.checked, isIgnoreDom.checked);
         console.log("不重复单词数", arr.length);
         console.log("不重复单词", arr);
-        arr = arr.filter(function (item) {
-            return item.count > 0;
-        });
+//        arr = arr.filter(function (item) {
+//            return item.count > 0;
+//        });
 
         var tbody = document.querySelector("tbody");
         tbody.innerHTML = "";

@@ -62,3 +62,18 @@
 > [配置文件](https://bower.io/docs/config/)      
 > [bower 使用](http://javascript.ruanyifeng.com/tool/bower.html#toc4)      
 > [bower解决js的依赖管理](http://blog.fens.me/nodejs-bower-intro/)   
+
+# bower install npm project
+    1.全局安装 resolvers
+        npm install -g bower-npm-resolver
+    2.修改bower配置文件
+        {
+            resolvers:[
+                "bower-npm-resolver"
+            ]
+        }
+    3.使用bower-npm-resolver(project添加前缀 npm: )
+        bower install npm:projectName
+## 参考
+> [Pluggable Resolvers · Bower](https://bower.io/docs/pluggable-resolvers/)      
+> [bower-npm-resolver - npm](https://www.npmjs.com/package/bower-npm-resolver)      

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>汽车俱乐部</title>
+</head>
+<body>
+<script>
+    var dataset = document.body.dataset;
+
+    dataset.a = "1";
+    dataset.B = "1";
+    dataset.CC = "1";
+    dataset.DdD = "1";
+    //    dataset["e-"] = "1";
+    //    dataset["-e"] = "1"; // error
+    //    dataset["e-e"] = "1";
+    dataset["e_"] = "1";
+
+    delete dataset.DdD;
+
+    var obj = {
+        a: "1"
+    };
+
+    dataset.obj = obj;
+
+    obj.a = 2;
+
+    console.log(dataset);
+</script>
+</body>
+</html>

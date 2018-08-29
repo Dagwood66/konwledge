@@ -1,3 +1,59 @@
+# 数据类型
+    Boolean
+        true false
+        true == 1   return true
+        false == 0  return false
+        true === 1  return false
+        false === 0 return false
+        Boolean(undefined) return false
+        Boolean(null) return false
+        Boolean(!null) return true
+        Boolean(0) return false
+        Boolean("1") return true
+        Boolean("") return true
+    Null
+    Undefined
+    Number
+        NaN 非数值
+        Number.MAX_VALUE 允许的最大数值
+        Number.MIN_VALUE 允许的最小数值
+    String
+    Symbol
+        不可变
+    Object
+## typeof
+    typeof Boolean
+        return string
+    typeof Null
+        return object null为空对象的引用,因此返回object
+    typeof Undefined    
+        return undefined
+    typeof Number    
+        return number
+    typeof String    
+        return string
+    typeof Symbol    
+        return symbol
+    typeof Object   
+        return object
+        return function 当对象是方法时
+## undefined null 区别
+    1. undefined 是 未定义
+       null      是 定义后未赋值
+    2. typeof 不同   
+## === 和 == 区别
+     == 比较的是值
+     === 比较的是值和数据类型
+## instanceof 
+    obj instanceof Object
+        return true
+    根据prototype判断构造参数    
+## 参考
+[Data_structures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures)  
+[浅谈 javascript 六种数据类型以及特殊注意点](http://wiki.jikexueyuan.com/project/brief-talk-js/on-six-data-type.html)
+  
+---  
+  
 # localStorage 与 sessionStorage
 ## Properties
     lenght 返回keyName数量

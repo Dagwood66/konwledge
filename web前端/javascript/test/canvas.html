@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>汽车俱乐部</title>
+    <style>
+        canvas {
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+<canvas id="canvasEle"></canvas>
+<script>
+    var canvasEle = document.getElementById("canvasEle");
+    var context = canvasEle.getContext("2d");
+
+    //    (function () {
+    //        context.fillStyle = "rgb(200,0,0)";
+    //        context.fillRect(10, 10, 50, 50);
+    //
+    //        context.fillStyle = "rgba(0,0,200,0.5)";
+    //        context.fillRect(30, 30, 55, 50);
+    //    })();
+
+    //    (function () {
+    //        context.fillRect(25, 25, 100, 100);
+    //        context.clearRect(45, 45, 60, 60);
+    //        context.strokeRect(50, 50, 50, 50);
+    //    })();
+
+    //    (function () {
+    //        context.beginPath();
+    //        context.moveTo(75, 50);
+    //        context.lineTo(100, 75);
+    //        context.lineTo(100, 25);
+    //        context.fill();
+    //    })();
+
+    //    (function () {
+    //        context.beginPath();
+    //        context.arc(75, 75, 50, 0, Math.PI * 2, true); // 绘制
+    //        context.moveTo(110, 75);
+    //        context.arc(75, 75, 35, 0, Math.PI, false);   // 口(顺时针)
+    //        context.moveTo(65, 65);
+    //        context.arc(60, 65, 5, 0, Math.PI * 2, true);  // 左眼
+    //        context.moveTo(95, 65);
+    //        context.arc(90, 65, 5, 0, Math.PI * 2, true);  // 右眼
+    //        context.stroke();
+    //    })();
+
+    //    (function () {
+    //        // 填充三角形
+    //        context.beginPath();
+    //        context.moveTo(25, 25);
+    //        context.lineTo(105, 25);
+    //        context.lineTo(25, 105);
+    //        context.fill();
+    //
+    //        // 描边三角形
+    //        context.beginPath();
+    //        context.moveTo(125, 125);
+    //        context.lineTo(125, 45);
+    //        context.lineTo(45, 125);
+    //        context.closePath();
+    //        context.stroke();
+    //    })();
+
+    //    (function () {
+    //        TODO
+    //        for (var i = 0; i < 4; i++) {
+    //            for (var j = 0; j < 3; j++) {
+    //                context.beginPath();
+    //                var x = 25 + j * 50; // x 坐标值
+    //                var y = 25 + i * 50; // y 坐标值
+    //                var radius = 20; // 圆弧半径
+    //                var startAngle = 0; // 开始点
+    //                var endAngle = Math.PI + (Math.PI * j) / 2; // 结束点
+    //                var anticlockwise = i % 2 == 0 ? false : true; // 顺时针或逆时针
+    //
+    //                context.arc(x, y, radius, startAngle, endAngle, anticlockwise);
+    //
+    //                if (i > 1) {
+    //                    context.fill();
+    //                } else {
+    //                    context.stroke();
+    //                }
+    //            }
+    //        }
+    //    })();
+
+//    (function () {
+//        for (var i = 0; i < 6; i++) {
+//            for (var j = 0; j < 6; j++) {
+//                context.fillStyle = 'rgb(' + Math.floor(255 - 42.5 * i) + ',' + Math.floor(255 - 42.5 * j) + ',0)';
+//                context.fillRect(j * 25, i * 25, 25, 25);
+//            }
+//        }
+//    })();
+
+    (function () {
+        for (var i = 0; i < 6; i++) {
+            for (var j = 0; j < 6; j++) {
+                context.strokeStyle = 'rgb(0,' + Math.floor(255 - 42.5 * i) + ',' + Math.floor(255 - 42.5 * j) + ')';
+                context.beginPath();
+                context.arc(12.5 + j * 25, 12.5 + i * 25, 10, 0, Math.PI * 2, true);
+                context.stroke();
+            }
+        }
+    })();
+</script>
+</body>
+</html>

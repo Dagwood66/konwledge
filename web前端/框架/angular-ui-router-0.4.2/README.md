@@ -6,3 +6,5 @@
                  $templateCache.remove(toState.templateUrl);  
              });  
        });       
+# ui-router 加载错误
+   ng-app="ngLocal" 导致加载错误     
