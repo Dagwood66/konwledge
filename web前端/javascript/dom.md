@@ -7,6 +7,17 @@
         dom.removeAttribute("key");    
     获取全部属性名
         dom.getAttributeNames();
+          
+---        
+          
+# input common event
+## oninput
+    触发方式
+        1.输入字符时触发
+        2.粘贴字符串时触发
+          
+---         
+          
 # input file
     dom属性
         accept="image/png" 仅允许以png为后缀的文件

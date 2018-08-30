@@ -1,29 +1,33 @@
 HTML
 
 CSS
-TODO flex
-TODO css常见布局
-TODO css垂直居中
-
+    TODO css常见布局
+    TODO css垂直居中
+    TODO flex
 Javascript
-TODO js apply call bind
-TODO this
-TODO js 事件 兼容
-TODO cookie
-TODO js select 操作
+    TODO this
+        https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/this
+    TODO js apply call bind
 
+    TODO js 事件 兼容
+    TODO js select 操作
+
+    TODO cookie
+
+    TODO 浏览器关闭刷新监听
+
+    TODO 正则表达式深入
+
+    TODO assign 使用
+        属性重复合并如何处理
+    TODO Blob深入
 Angular
-TODO angular 隔离作用域
-
+    TODO angular 隔离作用域
 Jquery
-TODO jquery ajax 设置拦截器
-TODO jquery eq 无效
-
+    TODO jquery ajax 设置拦截器
+    TODO jquery eq 无效
 Git
-TODO git移除远程分支
+    TODO git移除远程分支
+Gulp
+    TODO run -> start
 
-TODO 浏览器关闭刷新监听
-TODO 正则表达式深入
-TODO assign 使用
-    属性重复合并如何处理
-TODO Blob深入

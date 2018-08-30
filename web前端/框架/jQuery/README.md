@@ -40,12 +40,31 @@
 ## 添加事件
     $dom.click(func) 添加单击事件
         func 事件处理函数
+    $(selector).on(event,childSelector,data,function); 被选元素及子元素上添加一个或多个事件处理程序(包含动态元素)
+        event	必需。规定要从被选元素移除的一个或多个事件或命名空间。
+                由空格分隔多个事件值，也可以是数组。必须是有效的事件。
+        childSelector	可选。规定只能添加到指定的子元素上的事件处理程序。
+        data	可选。规定传递到函数的额外数据。
+        function	可选。规定当事件发生时运行的函数。
 ## 触发事件
     $dom.click() 触发事件
     $dom.trigger(eventName | event) 触发事件
         eventName 事件名
         event 事件
-## 删除事件          
+## 删除事件     
+    $dom.off(); 通常用于移除通过 on() 方法添加的事件处理程序。(最新版本)
+        $(selector).off(event,selector,function(eventObj),map)
+    $dom.unbind();
+        $dom.unbind();
+            删除全部事件
+        $dom.unbind(event);
+            删除当前事件
+        $dom.unbind(event,funcName);
+            删除当前事件指定的处理程序
+    $dom.die(); 
+        移除所有通过 live() 方法添加的事件处理程序
+    $dom.undelegate(); 
+        所有元素移除所有事件处理程序：
 ---        
      
 # jQuery对象与Dom对象转换

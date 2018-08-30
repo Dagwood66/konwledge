@@ -11,7 +11,12 @@
 ## 参考
 [Gulp 错误管理](https://csspod.com/error-management-in-gulp/)    
 [gulp-plumber](https://www.npmjs.com/package/gulp-plumber)
-
+## watch导致cpu占用过高
+    gulp.watch(glob[, opts], tasks)
+        opts watch监听配置
+            interval 监听间隔 默认100ms
+    方案1:
+        加大监听间隔            
 # plugins
 ---
 ## gulp-rev-collector
