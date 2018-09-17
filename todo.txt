@@ -4,6 +4,7 @@ CSS
     TODO css常见布局
     TODO css垂直居中
     TODO flex
+    TODO 多列布局
 Javascript
     TODO this
         https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/this
@@ -15,8 +16,6 @@ Javascript
     TODO cookie
 
     TODO 浏览器关闭刷新监听
-
-    TODO 正则表达式深入
 
     TODO assign 使用
         属性重复合并如何处理
@@ -30,4 +29,6 @@ Git
     TODO git移除远程分支
 Gulp
     TODO run -> start
-
+正则表达式
+    TODO 正则表达式深入
+    TODO 正则重复调用返回值错误
