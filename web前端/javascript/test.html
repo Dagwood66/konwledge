@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="aa"/>*<input type="text" id="cc"/>
+<span id="bb">{{hello}}</span>
+<script>
+    var obj = {};
+    Object.defineProperty(obj,"hello",{
+        get:function () {
+            return document.querySelector("aa").value;
+        },
+        set:function () {
+            return
+        }
+    })
+
+</script>
+</body>
+</html>
